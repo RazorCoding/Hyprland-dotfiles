@@ -1,0 +1,34 @@
+theme = "ruby-spectrum"
+
+[editor]
+line-number = "relative"
+cursorline = true
+bufferline = "multiple"
+auto-format = true
+true-color = true
+color-modes = true
+completion-trigger-len = 1
+auto-pairs = true
+auto-completion = true
+[editor.lsp]
+display-messages = true
+
+[editor.statusline]
+left = ["mode", "spinner", "file-absolute-path"]
+[editor.indent-guides]
+render = true
+character = "│"
+
+[editor.cursor-shape]
+insert = "bar"
+normal = "block"
+select = "underline"
+
+[editor.whitespace.render]
+space = "none"
+tab = "all"
+newline = "none"
+
+[keys.select]
+y = ["yank", ":clipboard-yank"]
+
