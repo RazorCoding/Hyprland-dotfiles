@@ -1,0 +1,230 @@
+// -*- mode: jsonc -*-
+{
+  "position": "top",
+  "mode": "dock",
+ "layer": "overlay",
+"exclusive": false,
+  "spacing": 1,
+"on-sigusr1": "hide",
+"on-sigusr2": "show",
+  "modules-left": [
+"custom/arch",
+"hyprland/workspaces",
+"custom/sep"
+  ],
+
+  "modules-center": [
+  ],
+
+  "modules-right":[
+  "custom/sep",
+  "idle_inhibitor",
+  "custom/sep", 
+  "backlight",
+ "custom/sep",
+"pulseaudio",
+"custom/sep",
+"custom/cava",
+"custom/sep",
+  "network",
+  "custom/sep", 
+  "battery",
+ "custom/sep",
+  "clock",
+ "custom/sep",
+  "tray" 
+],
+
+  "hyprland/workspaces": {
+    "disable-scroll": true,
+    "all-outputs": true,
+    "tooltip": false,
+    "warp-on-scroll": false,
+"format": "{name}:{icon}",
+"format-icons": {
+  "1": "Chat",
+  "2": "Browser",
+  "3": "Steam",
+  "4": "Code",
+  "5": "Game",
+  "6": "Discord",
+  "7": "Work1",
+  "8": "Work2",
+  "9": "Work3",
+  "10": "Work4",
+  "focused": "●",
+  "urgent": " Alert",
+}
+  },
+
+  "keyboard-state": {
+    "numlock": true,
+    "capslock": true,
+    "format": "{name} {icon}",
+    "format-icons": {
+      "locked": "",
+      "unlocked": ""
+    }
+  },
+
+  "sway/mode": {
+    "format": "<span style=\"italic\">{}</span>"
+  },
+
+  "sway/scratchpad": {
+    "format": "{icon} {count}",
+    "show-empty": false,
+    "format-icons": ["", ""],
+    "tooltip": true,
+    "tooltip-format": "{app}: {title}"
+  },
+
+  "mpd": {
+    "format": "{stateIcon} {consumeIcon}{randomIcon}{repeatIcon}{singleIcon}{artist} - {album} - {title} ({elapsedTime:%M:%S}/{totalTime:%M:%S}) ⸨{songPosition}|{queueLength}⸩ {volume}% ",
+    "format-disconnected": "Disconnected ",
+    "format-stopped": "{consumeIcon}{randomIcon}{repeatIcon}{singleIcon}Stopped ",
+    "unknown-tag": "N/A",
+    "interval": 5,
+    "consume-icons": { "on": " " },
+    "random-icons": { "off": "<span color=\"#f53c3c\"></span> ", "on": " " },
+    "repeat-icons": { "on": " " },
+    "single-icons": { "on": "1 " },
+    "state-icons": { "paused": "", "playing": "" },
+    "tooltip-format": "MPD (connected)",
+    "tooltip-format-disconnected": "MPD (disconnected)"
+  },
+
+  "idle_inhibitor": {
+    "format":"{icon}",
+    "format-icons": { "activated": "", "deactivated": "" }
+  },
+
+  "tray": { "icon-size":27, "spacing": 7 },
+
+  "clock": {
+    "format":"{:%a, %d %b %Y %I:%M:%S %p}",
+    "interval": 0,
+    "tooltip": false
+  },
+
+
+"custom/cpu": {
+  "exec": "~/.config/waybar/scripts/cpu",
+  "interval": 4
+},
+
+
+  "battery": {
+  "format": "{icon} {capacity}%",
+  "format-charging": " {capacity}%",
+  "format-plugged": " {capacity}%",
+  "format-warning": " {capacity}%",
+  "format-critical": " {capacity}%",
+  "format-icons": ["","","","",""],
+  "interval": 1,
+  "states": {
+    "warning": 30,
+    "critical": 20
+  }
+},
+
+  "battery#bat2": { "bat": "BAT2" },
+
+  "power-profiles-daemon": {
+    "format": "{icon}",
+    "tooltip-format": "Power profile: {profile}\nDriver: {driver}",
+    "tooltip": true,
+    "format-icons": {
+      "default": " ",
+      "performance": " ",
+      "balanced": " ",
+      "power-saver": " "
+    }
+  },
+"backlight": {
+    "device": "amdgpu_bl2",
+    "format": " {percent}%",
+    "on-scroll-up": "brightnessctl -d amdgpu_bl2 set +5%",
+    "on-scroll-down": "brightnessctl -d amdgpu_bl2 set 5%-"
+},
+"network": {
+  "interface": "wlo1",
+  "format-wifi": "",
+  "format-disconnected": "",
+  "tooltip-format": "SSID: {essid}\nSignal: {signalStrength}%\nIP: {ipaddr}\n↓ {bandwidthDownBits} ↑ {bandwidthUpBits}"
+},
+
+  "custom/cpu": {
+    "format": " {}",
+    "exec": "mpstat 1 1 | awk '/Average:/ {printf(\"%.1f%%\", 100 - $NF)}'",
+    "interval": 5
+  },
+  "custom/hyprsunset": {
+    "exec": "~/.config/waybar/scripts/hyprsunset-module.sh",
+    "interval": 300,
+    "return-type": "json"
+},
+
+  "custom/airplane": {
+    "exec": "~/.config/waybar/scripts/airplane_status.sh",
+    "interval": 1,
+    "return-type": "json",
+    "tooltip": true
+},
+
+  "custom/battery_health": {
+    "exec": "~/.config/waybar/scripts/battery_health.sh",
+    "interval": 1,
+    "return-type": "plain",
+    "tooltip": false
+  },
+
+  "custom/cava": {
+    "format": "{}",
+    "exec": "~/.config/waybar/scripts/cava.sh",
+    "tooltip": false
+  },
+"pulseaudio": {
+    "format": " {volume}%",
+    "format-muted": " Muted",
+    "scroll-step": 5
+},
+  "custom/net": {
+    "exec": "/home/Gnana/.config/waybar/scripts/net_graph.sh",
+    "return-type": "json",
+    "interval": 1
+  },
+"custom/public_ip": {
+    "exec": "~/.config/waybar/scripts/pub_ip.sh",
+    "interval": 300,
+    "tooltip": false,
+    "format": " {}"
+},
+"custom/sep": {
+	"format": "/",  // Powerline style arrow (or │, ❯, •, etc.)
+	
+},
+"custom/rss": {
+    "exec": "/home/Gnana/.config/waybar/scripts/rss-notify.sh",
+    "interval": 300,   // check every 5 minutes
+    "format": "📰"
+},
+"custom/pacman": {
+    "exec": "~/.config/waybar/scripts/pacman_updates.sh",
+    "interval": 300,
+    "tooltip": true,
+    "return-type": "text",
+    "format": "{}"
+},
+"custom/arch": {
+    "format": "..",
+    "tooltip": false
+}
+},
+ "temperature": {
+     "thermal-zone": 2,
+     "hwmon-path": "/sys/class/hwmon/hwmon2/temp1_input",
+     "critical-threshold": 80,
+     "format-critical": "{temperatureC}°C ",
+    "format": "{temperatureC}°C "
+}
