@@ -1,0 +1,25 @@
+* {
+    font-family: "IosevkaSS17";
+    font-size: 20px;
+}
+window {
+    background-color: #262626;
+    color: #ffffff;
+    border-radius: 10px;
+}
+
+#input {
+    background-color: #262626;
+    color: #ffffff;
+    border: none;
+}
+
+#entry {
+    background-color: #262626;
+    color: #ffffff;
+}
+
+#entry:selected {
+    background-color: #404040;
+    color: #ffffff;
+}
