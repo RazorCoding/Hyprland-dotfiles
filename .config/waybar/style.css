@@ -1,0 +1,179 @@
+* {
+  border: 0;
+  border-radius: 0px;
+  padding: 0;
+  margin: 0;
+  min-height: 40px;
+ font-family: "IosevkaSS17",
+                 "Font Awesome 7 Free Solid",
+                 "Font Awesome 7 Brands";  
+}
+
+#waybar {
+	  font-size: 22px;
+    background: rgba(36, 36, 36, 0.95);    
+    color: #d4d4d4;
+}
+
+#workspaces {
+  padding: 0;
+  margin: 0 0px;
+}
+
+#workspaces button {
+    padding: 0px 3px;
+    color: #969696;
+    background: transparent;
+    font-size: 12px;   /* Smaller text */
+      font-size: 22px;
+}
+
+#workspaces button.active {
+    color: #fff;
+    border-bottom: 0px solid #ff2b44;
+
+}
+
+#workspaces button:hover {
+    background: none;
+    color: #e0e0e0;
+    border: none;
+    border-radius: inherit;
+    box-shadow: none;
+    outline: none;
+}
+
+/* Focused workspace: underline */
+#workspaces button.focused {
+  border-bottom: 2px solid #ed0e0e;
+}
+
+#workspaces button.urgent {
+   background-color: #ff0000;
+   color: #fff;
+   border-radius: 5px;
+   margin: 4px;
+}
+
+#mode {
+  background-color: #64727D;
+  color: #ffffff;
+  padding: 0 6px;
+  margin: 0 2px;
+}
+
+#custom-cava,
+#custom-public_ip,
+#custom-net,
+#idle_inhibitor,
+#custom-battery_health,
+#clock,
+#battery,
+#cpu,
+#memory,
+#network,
+#pulseaudio,
+#backlight,
+#bluetooth{
+	padding: 0 3px;
+}
+
+
+#custom-sep{
+	
+	color: #0ff000;
+}
+#idle_inhibitor.activated{
+	color: #fff;
+        animation: idle-blink 0.6s infinite alternate;
+	
+}
+#idle_inhibitor.deactivated{
+	color: #fff;
+}
+
+@keyframes idle-blink {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0.2;
+    }
+}
+
+#custom-cava
+{
+	font-size: 23px;
+        color: rgba(181, 7, 7,0.4);   /* transparent red */
+}
+
+#network.wifi {
+    color: #2fff00;
+   animation: net-blink 0.2s infinite alternate;
+}
+
+#network.disconnected {
+    color: #ff0000;
+    animation: net-blink-fast 0.2s infinite alternate;
+}
+
+
+@keyframes net-blink {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0.4;
+    }
+}
+
+@keyframes net-blink-fast {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0.4;
+    }
+}
+
+
+#battery,
+#battery.charging,
+#battery.plugged
+{
+	color: #ff8400;
+       /*animation: bat-blink 0.1s infinite alternate;*/
+	
+}
+#battery.discharging,
+#battery.warning,
+#battery.critical{
+	color: #c4004b;
+        animation: bat-blink-fast 0.2s infinite alternate;
+	
+}
+
+@keyframes bat-blink {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0.5;
+    }
+}
+
+@keyframes bat-blink-fast {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0.1;
+    }
+}
+
+#custom-arch
+{
+	font-size: 21px;
+	color: #ff0000;
+}
+

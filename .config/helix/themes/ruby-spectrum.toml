@@ -1,0 +1,35 @@
+inherits = "dark_plus"
+
+# ===== UI =====
+"ui.background" = { bg = "#212121" }
+"ui.cursor" = { fg = "#0d0b10", bg = "#ff003c" }
+"ui.selection" = { bg = "#2a1620" }
+"ui.linenr" = { fg = "#5a3a45" }
+"ui.linenr.selected" = { fg = "#ff3355", modifiers = ["bold"] }
+
+# ===== Diagnostics (strong red focus) =====
+"diagnostic.error" = { fg = "#ff003c", underline = { color = "#ff003c", style = "curl" } }
+"diagnostic.warning" = { fg = "#ff8800", underline = { color = "#ff8800", style = "dashed" } }
+"diagnostic.info" = { fg = "#00bbff" }
+"diagnostic.hint" = { fg = "#00ffaa" }
+
+# ===== Core Syntax =====
+"keyword" = { fg = "#ff3355", modifiers = ["bold"] }
+"type" = { fg = "#00ccff" }
+"function" = { fg = "#00ffaa" }
+"variable" = { fg = "#ffffff" }
+"string" = { fg = "#aaff00" }
+"constant" = { fg = "#ff9900" }
+"comment" = { fg = "#70505a", modifiers = ["italic"] }
+
+# ===== Brackets & Structure (red dominant) =====
+"punctuation.bracket" = { fg = "#ff003c", modifiers = ["bold"] }
+"punctuation.delimiter" = { fg = "#ff3355" }
+
+# ===== Operators =====
+"operator" = { fg = "#ff66aa" }
+
+# ===== C++ Specific Boost =====
+"namespace" = { fg = "#ff5500" }
+"macro" = { fg = "#ff2244", modifiers = ["bold"] }
+"label" = { fg = "#00ffee" }
