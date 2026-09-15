@@ -1,0 +1,11 @@
+[[language]]
+name = "cpp"
+scope = "source.cpp"
+file-types = ["cpp", "cc", "cxx", "hpp", "h", "hh", "hxx"]
+indent = { tab-width = 2, unit = "  " }
+language-servers = [ "clangd" ]
+formatter = { command = "clang-format", args = ["-style=file"] }
+auto-format = true
+
+[language-server.clangd]
+command = "clangd"

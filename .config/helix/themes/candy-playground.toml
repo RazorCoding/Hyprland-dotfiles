@@ -1,0 +1,39 @@
+# Candy Playground Theme (Fun + Colorful)
+
+# Background & UI
+"ui.background" = { bg = "#1f1f28" }
+"ui.text" = "#f8f8f2"
+
+"ui.linenr" = "#6c7086"
+"ui.linenr.selected" = "#ffd166"
+
+"ui.cursor" = { fg = "#1f1f28", bg = "#ffadad", modifiers = ["bold"] }
+
+"ui.selection" = { bg = "#3b3b52" }
+
+"ui.statusline" = { fg = "#ffffff", bg = "#44475a" }
+"ui.statusline.inactive" = { fg = "#bbbbbb", bg = "#2b2b3a" }
+
+# Syntax Colors
+
+"comment" = { fg = "#7bd389", modifiers = ["italic"] }
+
+"keyword" = { fg = "#ff6b6b", modifiers = ["bold"] }
+"keyword.control" = "#ff8787"
+
+"string" = "#ffd166"
+"constant" = "#ff9f1c"
+
+"function" = "#4cc9f0"
+"function.macro" = "#00bbf9"
+
+"type" = "#c77dff"
+"constructor" = "#9d4edd"
+
+"variable" = "#f8f8f2"
+"variable.parameter" = "#90dbf4"
+
+"number" = "#f9844a"
+"operator" = "#ffafcc"
+
+"punctuation" = "#a0c4ff"
