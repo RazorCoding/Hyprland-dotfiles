@@ -23,6 +23,7 @@
 
 hl.env("__GLX_VENDOR_LIBRARY_NAME", "nvidia")
 hl.env("LIBVA_DRIVER_NAME", "nvidia")
+hl.env("QT_QPA_PLATFORMTHEME", "qt6ct")
 --monitor=,2400x1080@60,auto,1
 hl.monitor({
     output = "eDP-1",
@@ -203,6 +204,10 @@ hl.bind("XF86MonBrightnessDown", hl.dsp.exec_cmd("brightnessctl set 5%-"))
 hl.bind("XF86AudioPlay", hl.dsp.exec_cmd(
     "playerctl play-pause; sleep 0.1; s=$(playerctl status 2>/dev/null); if [ \"$s\" = \"Playing\" ]; then notify-send -u low -t 1500 '▶ Playing' \"$(playerctl metadata --format '{{ artist }} — {{ title }}')\"; else notify-send -u low -t 1500 '⏸ Paused' \"$(playerctl metadata --format '{{ artist }} — {{ title }}')\"; fi"
 ))
+
+hl.bind("XF86AudioRaiseVolume", hl.dsp.exec_cmd("wpctl set-volume -l 1.5 @DEFAULT_AUDIO_SINK@ 5%+ && wpctl get-volume @DEFAULT_AUDIO_SINK@ | awk '{print \"🔊 Volume: \" int($2*100) \"%\"}' | xargs -r -I{} notify-send -u low -t 1500 {}"))
+hl.bind("XF86AudioLowerVolume", hl.dsp.exec_cmd("wpctl set-volume -l 1.5 @DEFAULT_AUDIO_SINK@ 5%- && wpctl get-volume @DEFAULT_AUDIO_SINK@ | awk '{print \"🔊 Volume: \" int($2*100) \"%\"}' | xargs -r -I{} notify-send -u low -t 1500 {}"))
+hl.bind("XF86AudioMute", hl.dsp.exec_cmd("wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle && wpctl get-volume @DEFAULT_AUDIO_SINK@ | awk '{print ($0 ~ /MUTED/) ? \"🔇 Muted\" : \"🔊 Unmuted\"}' | xargs -r -I{} notify-send -u low -t 1500 {}"))
 
 
 hl.bind(mainMod .. " + Left", hl.dsp.window.resize({ x = -50, y = 0, relative = true }))
