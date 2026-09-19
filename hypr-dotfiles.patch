@@ -1,0 +1,15 @@
+diff -ruN a/.config/hypr/hypridle.conf b/.config/hypr/hypridle.conf
+--- a/.config/hypr/hypridle.conf	2026-09-19 09:16:16.229314052 +0530
++++ b/.config/hypr/hypridle.conf	2026-09-19 09:16:16.233175509 +0530
+@@ -23,6 +23,11 @@
+     on-resume  = hyprctl dispatch 'hl.dsp.dpms({ action = "enable" })'
+ }
+ 
++listener {
++    timeout = 300
++    on-timeout = loginctl lock-session
++}
++
+ # -----------------------------
+ #listener {
+ #    timeout = 500
