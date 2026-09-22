@@ -1,0 +1,86 @@
+version = 2
+
+[global]
+allow_fp16 = true
+dll = "/home/Gnana/.local/share/Steam/steamapps/common/Lossless Scaling/lsfg-vk.dll"
+log_file = "/home/Gnana/.config/lsfg-vk/layer.log"
+log_level = "debug"
+
+[[profile]]
+flow_scale = 0.85
+multiplier = 4
+name = "4x FG / 85% [Performance]"
+override_present_mode = true
+pacing_mode = "vsync"
+performance_mode = true
+preserve_swapchain_image_count = false
+
+[[profile]]
+active_in = "GenshinImpact.exe"
+flow_scale = 1.0
+multiplier = 2
+name = "2x FG / 100%"
+override_present_mode = true
+pacing_mode = "vsync"
+performance_mode = false
+preserve_swapchain_image_count = false
+
+[[profile]]
+active_in = "SnowRunner.exe"
+flow_scale = 1.0
+multiplier = 2
+name = "Cobat"
+override_present_mode = true
+pacing_mode = "vsync"
+performance_mode = true
+preserve_swapchain_image_count = true
+
+[[profile]]
+active_in = "FarCry4.exe"
+flow_scale = 1.0
+multiplier = 2
+name = "FarCry"
+override_present_mode = true
+pacing_mode = "vsync"
+performance_mode = false
+preserve_swapchain_image_count = false
+
+[[profile]]
+active_in = "TekkenGame-Win64-Shipping.exe"
+flow_scale = 1.0
+multiplier = 2
+name = "takken 7"
+override_present_mode = true
+pacing_mode = "vsync"
+performance_mode = false
+preserve_swapchain_image_count = false
+
+[[profile]]
+active_in = "AoE3DE_s.exe"
+flow_scale = 1.0
+multiplier = 4
+name = "AoE3DE_s"
+override_present_mode = true
+pacing_mode = "vsync"
+performance_mode = true
+preserve_swapchain_image_count = false
+
+[[profile]]
+active_in = "cs2"
+flow_scale = 1.0
+multiplier = 2
+name = "Counter Strike 2"
+override_present_mode = true
+pacing_mode = "vsync"
+performance_mode = true
+preserve_swapchain_image_count = false
+
+[[profile]]
+active_in = "POLYGON-Win64-Shipping.exe"
+flow_scale = 1.0
+multiplier = 2
+name = "POlyGone"
+override_present_mode = true
+pacing_mode = "vsync"
+performance_mode = true
+preserve_swapchain_image_count = false
