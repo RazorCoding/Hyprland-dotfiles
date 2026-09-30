@@ -1,0 +1,27 @@
+#!/usr/bin/env zsh
+
+last_title=""
+
+while true; do
+    player=$(playerctl -l 2>/dev/null | grep -Ei 'chrom|firefox|brave|edge|opera' | head -n 1)
+
+    if [[ -n "$player" ]]; then
+        metadata=$(playerctl -p "$player" metadata --format \
+            '{{title}}\n{{artist}}\n{{duration(mpris:length)}}' 2>/dev/null)
+
+        title=$(print -r -- "$metadata" | sed -n '1p')
+        artist=$(print -r -- "$metadata" | sed -n '2p')
+        length=$(print -r -- "$metadata" | sed -n '3p')
+
+        if [[ -n "$title" && "$title" != "$last_title" ]]; then
+            last_title="$title"
+
+            notify-send \
+                -u low \
+                "  YouTube" \
+                "$title\n$artist • $length"
+        fi
+    fi
+
+    sleep 1
+done
