@@ -201,11 +201,12 @@ hl.bind(mainMod .. " + mouse:273", hl.dsp.window.resize())
 hl.bind("XF86MonBrightnessUp", hl.dsp.exec_cmd("brightnessctl set +5%"))
 hl.bind("XF86MonBrightnessDown", hl.dsp.exec_cmd("brightnessctl set 5%-"))
 
-hl.bind("XF86AudioPlay", hl.dsp.exec_cmd(
-    "playerctl play-pause; sleep 0.1; s=$(playerctl status 2>/dev/null); if [ \"$s\" = \"Playing\" ]; then notify-send -u low -t 1500 '▶ Playing' \"$(playerctl metadata --format '{{ artist }} — {{ title }}')\"; else notify-send -u low -t 1500 '⏸ Paused' \"$(playerctl metadata --format '{{ artist }} — {{ title }}')\"; fi"
-))
+hl.bind("XF86AudioPlay", hl.dsp.exec_cmd("playerctl play-pause; notify-send -u low ' YouTube' \"$(playerctl metadata --format '{{title}}' 2>/dev/null)\""))
 
 hl.bind("XF86AudioRaiseVolume", hl.dsp.exec_cmd("wpctl set-volume -l 1.5 @DEFAULT_AUDIO_SINK@ 5%+"))
+
+hl.bind("XF86AudioPrev", hl.dsp.exec_cmd("playerctl previous"))
+hl.bind("XF86AudioNext", hl.dsp.exec_cmd("playerctl next"))
 hl.bind("XF86AudioLowerVolume", hl.dsp.exec_cmd("wpctl set-volume -l 1.5 @DEFAULT_AUDIO_SINK@ 5%-"))
 hl.bind("XF86AudioMute", hl.dsp.exec_cmd("wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"))
 
@@ -254,7 +255,7 @@ hl.config({
         gaps_out = 4,
         border_size = 0,
         col = {
-            active_border = { colors = { "rgb(fcba03)", "rgb(fcba03)" }, angle = 45 },
+            active_border = { colors = { "rgb(ff0048)", "rgb(ff0048)" }, angle = 45 },
             inactive_border = "rgba(000000aa)",
         },
         layout = "dwindle",
@@ -263,7 +264,7 @@ hl.config({
     },
     decoration = {
         -- See https://wiki.hyprland.org/Configuring/Variables/ for more
-        rounding = 5,
+        rounding = 6,
         blur = {
             enabled = false,
             size = 8,
@@ -337,6 +338,6 @@ hl.on("hyprland.start", function()
     hl.exec_cmd("sunsetr")
     hl.exec_cmd("wl-paste --type text --watch cliphist store")
     hl.exec_cmd("wl-paste --type image --watch cliphist store")
-
+    hl.exec_cmd("~/.local/bin/yt")
     end)
 
