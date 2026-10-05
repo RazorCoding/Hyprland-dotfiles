@@ -181,4 +181,10 @@
 #custom-bluetooth {
 	color: #2fff00;
 }
+#custom-bluetooth.warning {
+	color: #ff8400;
+}
+#custom-bluetooth.critical {
+	color: #c4004b;
+}
 
