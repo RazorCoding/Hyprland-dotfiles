@@ -11,6 +11,7 @@ macs=$(printf '%s\n' "$info" |
 
 if [ -n "$macs" ]; then
 	first_level=""
+	first_name=""
 	rows=""
 	count=0
 
@@ -33,10 +34,17 @@ if [ -n "$macs" ]; then
 		else
 			rows="$rows$name\n"
 		fi
+
+		[ -z "$first_name" ] && first_name="$name"
 	done <<< "$macs"
 
-	if [ -n "$first_level" ]; then
-		text="$icon_on $first_level%"
+	safe_name=${first_name//\"/}
+	safe_name=${safe_name//\\/\\\\}
+
+	if [ -n "$first_name" ] && [ -n "$first_level" ]; then
+		text="$icon_on $safe_name ($first_level%)"
+	elif [ -n "$first_name" ]; then
+		text="$icon_on $safe_name"
 	else
 		text="$icon_on"
 	fi
