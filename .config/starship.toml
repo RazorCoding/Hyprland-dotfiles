@@ -55,8 +55,8 @@ truncation_length = 0
 truncate_to_repo = false
 style = "#0ff000"
 [character]
-success_symbol = "[⟩](#88ff00)"
-error_symbol = "[⟩](#ff0000)"
-vicmd_symbol = "[⟩](bold purple)"
+success_symbol = "[#](#88ff00)"
+error_symbol = "[#](#ff0000)"
+vicmd_symbol = "[#](bold purple)"
 
 
