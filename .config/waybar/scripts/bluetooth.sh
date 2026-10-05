@@ -2,7 +2,7 @@
 
 SEP="/"
 
-icon_on=""
+icon_on=""
 
 info=$(bluetoothctl devices Connected 2>/dev/null)
 
