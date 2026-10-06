@@ -178,13 +178,4 @@
 	color: #ff0000;
 }
 
-#custom-bluetooth {
-	color: #64de07;
-}
-#custom-bluetooth.warning {
-	color: #ff8400;
-}
-#custom-bluetooth.critical {
-	color: #c4004b;
-}
 

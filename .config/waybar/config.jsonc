@@ -17,8 +17,7 @@
   ],
 
   "modules-right":[
-  "custom/sep",
-  "custom/bluetooth",  
+
   "custom/sep",
   "idle_inhibitor",
   "custom/sep", 
@@ -55,7 +54,7 @@
   "9": "Work3",
   "10": "Work4",
   "focused": "●",
-  "urgent": "[-.-]",
+  "urgent": "!ALERT!",
   
 }
   },
@@ -221,16 +220,8 @@
     "format": "{}"
 },
 "custom/arch": {
-    "format": "..",
-    "on-click": "mpv --loop-file=inf ~/Mai/Ae*navratri.mp4"
-  },
-  "custom/bluetooth": {
-    "exec": "~/.config/waybar/scripts/bluetooth.sh",
-    "interval": 2,
-    "return-type": "json",
-    "tooltip": true,
-"on-click": "blueman-manager"
-  },
+    "format": ".."
+ },
 
  "temperature": {
      "thermal-zone": 2,
