@@ -16,8 +16,7 @@
 	  "hyprland/window"
   ],
 
-  "modules-right":[
-
+  "modules-right":[	  
   "custom/sep",
   "idle_inhibitor",
   "custom/sep", 
@@ -28,6 +27,8 @@
 "custom/cava",
 "custom/sep",
   "network",
+  "custom/sep",
+  "bluetooth",
   "custom/sep",
     "battery",
   "custom/sep",
@@ -73,6 +74,16 @@
     "format": "<span style=\"italic\">{}</span>"
   },
 
+  "bluetooth": {
+	// "controller": "controller1", // specify the alias of the controller if there are more than 1 on the system
+	"format": "",
+	"format-disabled": "", // an empty format will hide the module
+	"format-connected": "",
+	"tooltip-format": "{controller_alias}\t{controller_address}",
+	"tooltip-format-connected": "{controller_alias}\t{controller_address}\n\n{device_enumerate}",
+	"tooltip-format-enumerate-connected": "{device_alias}\t{device_address}",
+	"on-click": "bluetoothctl info 22:99:35:E6:50:44 | grep -q 'Connected: yes' && bluetoothctl disconnect 22:99:35:E6:50:44 || bluetoothctl connect 22:99:35:E6:50:44"
+},
   "sway/scratchpad": {
     "format": "{icon} {count}",
     "show-empty": false,

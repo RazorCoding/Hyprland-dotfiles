@@ -172,6 +172,22 @@
     }
 }
 
+#bluetooth.off
+{
+	color: #d4d4d4;
+}
+#bluetooth.on
+{
+	color: #0ff000;
+}
+
+#bluetooth.connected
+{
+	color: #0ff000;
+     animation: bat-blink-fast 0.2s infinite alternate;
+
+}
+
 #custom-arch
 {
 	font-size: 21px;
