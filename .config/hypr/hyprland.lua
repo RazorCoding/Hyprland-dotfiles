@@ -201,6 +201,10 @@ hl.bind(mainMod .. " + mouse:273", hl.dsp.window.resize())
 hl.bind("XF86MonBrightnessUp", hl.dsp.exec_cmd("brightnessctl set +5%"))
 hl.bind("XF86MonBrightnessDown", hl.dsp.exec_cmd("brightnessctl set 5%-"))
 
+hl.bind("mouse_down", hl.dsp.exec_cmd("brightnessctl set +5%"))
+hl.bind("mouse_up", hl.dsp.exec_cmd("brightnessctl set 5%-"))
+
+
 hl.bind("XF86AudioPlay", hl.dsp.exec_cmd("playerctl play-pause; notify-send -u low ' YouTube' \"$(playerctl metadata --format '{{title}}' 2>/dev/null)\""))
 
 hl.bind("XF86AudioRaiseVolume", hl.dsp.exec_cmd("wpctl set-volume -l 1.5 @DEFAULT_AUDIO_SINK@ 5%+"))
@@ -251,7 +255,7 @@ hl.config({
     },
     general = {
         -- See https://wiki.hyprland.org/Configuring/Variables/ for more
-        gaps_in = 4,
+        gaps_in = 5,
         gaps_out = 4,
         border_size = 0,
         col = {
@@ -295,6 +299,7 @@ hl.config({
         force_default_wallpaper = 0, -- Set to 0 or 1 to disable the anime mascot wallpapers
         mouse_move_enables_dpms = true,
         key_press_enables_dpms = true,
+	 vrr = 0
     },
     -- Example per-device config
     -- See https://wiki.hyprland.org/Configuring/Keywords/#per-device-input-configs for more
