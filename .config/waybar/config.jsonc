@@ -1,244 +1,196 @@
-// -*- mode: jsonc -*-
-{
-  "position": "top",
-  "mode": "dock",
- "layer": "overlay",
-"exclusive": false,
-  "spacing": 1,
-"on-sigusr1": "hide",
-"on-sigusr2": "show",
-  "modules-left": [
-"custom/arch",
-"hyprland/workspaces"
-  ],
-
-  "modules-center": [
-	  "hyprland/window"
-  ],
-
-  "modules-right":[	  
-  "custom/sep",
-  "idle_inhibitor",
-  "custom/sep", 
-  "backlight",
- "custom/sep",
-"pulseaudio",
-"custom/sep",
-"custom/cava",
-"custom/sep",
-  "network",
-  "custom/sep",
-  "bluetooth",
-  "custom/sep",
-    "battery",
-  "custom/sep",
-   "clock",
-  "custom/sep",
-   "tray"
-],
-
-  "hyprland/workspaces": {
-    "disable-scroll": true,
-    "all-outputs": true,
-    "tooltip": false,
-    "warp-on-scroll": false,
-"format": "{name}:{icon}",
-"format-icons": {
-  "1": "Chat",
-  "2": "Browser",
-  "3": "Steam",
-  "4": "Code",
-  "5": "Game",
-  "6": "Discord",
-  "7": "Work1",
-  "8": "Work2",
-  "9": "Work3",
-  "10": "Work4",
-  "focused": "●",
-  "urgent": "!ALERT!",
-  
+* {
+  border: 0;
+  border-radius: 0px;
+  padding: 0;
+  margin: 0;
+  min-height: 40px;
+ font-family: "Iosevka SS18",
+                 "Font Awesome 7 Free Solid",
+                 "Font Awesome 7 Brands";  
 }
-  },
 
-  "keyboard-state": {
-    "numlock": true,
-    "capslock": true,
-    "format": "{name} {icon}",
-    "format-icons": {
-      "locked": "",
-      "unlocked": ""
-    }
-  },
+#waybar {
+	  font-size: 22px;
+    background: rgba(30, 30, 30, 0.95);    
+    color: #d4d4d4;
+}
 
-  "sway/mode": {
-    "format": "<span style=\"italic\">{}</span>"
-  },
+#workspaces {
+  padding: 0;
+  margin: 0 0px;
+}
 
-  "bluetooth": {
-	// "controller": "controller1", // specify the alias of the controller if there are more than 1 on the system
-	"format": "",
-	"format-disabled": "", // an empty format will hide the module
-	"format-connected": "",
-	"tooltip-format": "{controller_alias}\t{controller_address}",
-	"tooltip-format-connected": "{controller_alias}\t{controller_address}\n\n{device_enumerate}",
-	"tooltip-format-enumerate-connected": "{device_alias}\t{device_address}",
-	"on-click": "bluetoothctl info 22:99:35:E6:50:44 | grep -q 'Connected: yes' && bluetoothctl disconnect 22:99:35:E6:50:44 || bluetoothctl connect 22:99:35:E6:50:44"
-},
-  "sway/scratchpad": {
-    "format": "{icon} {count}",
-    "show-empty": false,
-    "format-icons": ["", ""],
-    "tooltip": true,
-    "tooltip-format": "{app}: {title}"
-  },
+#workspaces button {
+    padding: 0px 3px;
+    color: #969696;
+    background: transparent;
+    font-size: 12px;   /* Smaller text */
+      font-size: 22px;
+}
 
-  "mpd": {
-    "format": "{stateIcon} {consumeIcon}{randomIcon}{repeatIcon}{singleIcon}{artist} - {album} - {title} ({elapsedTime:%M:%S}/{totalTime:%M:%S}) ⸨{songPosition}|{queueLength}⸩ {volume}% ",
-    "format-disconnected": "Disconnected ",
-    "format-stopped": "{consumeIcon}{randomIcon}{repeatIcon}{singleIcon}Stopped ",
-    "unknown-tag": "N/A",
-    "interval": 5,
-    "consume-icons": { "on": " " },
-    "random-icons": { "off": "<span color=\"#f53c3c\"></span> ", "on": " " },
-    "repeat-icons": { "on": " " },
-    "single-icons": { "on": "1 " },
-    "state-icons": { "paused": "", "playing": "" },
-    "tooltip-format": "MPD (connected)",
-    "tooltip-format-disconnected": "MPD (disconnected)"
-  },
+#workspaces button.active {
+    color: #fff;
+    border-bottom: 0px solid #ff2b44;
 
-  "idle_inhibitor": {
-    "format":"{icon}",
-    "format-icons": { "activated": "", "deactivated": "" }
-  },
+}
 
-  "tray": { "icon-size":27, "spacing": 7 },
+#workspaces button:hover {
+    background: none;
+    color: #e0e0e0;
+    border: none;
+    border-radius: inherit;
+    box-shadow: none;
+    outline: none;
+}
 
-  "clock": {
-    "format":"{:%a, %d %b %Y %I:%M:%S %p}",
-    "interval": 0,
-    "tooltip": false
-  },
+/* Focused workspace: underline */
+#workspaces button.focused {
+  border-bottom: 2px solid #ed0e0e;
+}
+
+#workspaces button.urgent {
+   background-color: #ba261c;
+   color: #fff;
+   border-radius: 5px;
+   margin: 4px;
+}
+
+#mode {
+  background-color: #64727D;
+  color: #ffffff;
+  padding: 0 6px;
+  margin: 0 2px;
+}
+
+#custom-cava,
+#custom-public_ip,
+#custom-net,
+#custom-bluetooth,
+#idle_inhibitor,
+#custom-battery_health,
+#clock,
+#battery,
+#cpu,
+#memory,
+#network,
+#pulseaudio,
+#backlight,
+#bluetooth{
+	padding: 0 3px;
+}
 
 
-"custom/cpu": {
-  "exec": "~/.config/waybar/scripts/cpu",
-  "interval": 4
-},
-
-
-  "battery": {
-  "format": "{icon} {capacity}%",
-  "format-charging": " {capacity}%",
-  "format-plugged": " {capacity}%",
-  "format-warning": " {capacity}%",
-  "format-critical": " {capacity}%",
-  "format-icons": ["","","","",""],
-  "interval": 1,
-  "states": {
-    "warning": 20,
-    "critical": 5
-  }
-},
-
-  "battery#bat2": { "bat": "BAT2" },
-
-  "power-profiles-daemon": {
-    "format": "{icon}",
-    "tooltip-format": "Power profile: {profile}\nDriver: {driver}",
-    "tooltip": true,
-    "format-icons": {
-      "default": " ",
-      "performance": " ",
-      "balanced": " ",
-      "power-saver": " "
-    }
-  },
-"backlight": {
-    "device": "amdgpu_bl2",
-    "format": " {percent}%",
-    "on-scroll-up": "brightnessctl -d amdgpu_bl2 set +5%",
-    "on-scroll-down": "brightnessctl -d amdgpu_bl2 set 5%-"
-},
-"network": {
-  "interface": "wlo1",
-  "format-wifi": "",
-  "format-disconnected": "",
-  "tooltip-format": "SSID: {essid}\nSignal: {signalStrength}%\nIP: {ipaddr}\n↓ {bandwidthDownBits} ↑ {bandwidthUpBits}"
-},
-
-  "custom/cpu": {
-    "format": " {}",
-    "exec": "mpstat 1 1 | awk '/Average:/ {printf(\"%.1f%%\", 100 - $NF)}'",
-    "interval": 5
-  },
-  "custom/hyprsunset": {
-    "exec": "~/.config/waybar/scripts/hyprsunset-module.sh",
-    "interval": 300,
-    "return-type": "json"
-},
-
-  "custom/airplane": {
-    "exec": "~/.config/waybar/scripts/airplane_status.sh",
-    "interval": 1,
-    "return-type": "json",
-    "tooltip": true
-},
-
-  "custom/battery_health": {
-    "exec": "~/.config/waybar/scripts/battery_health.sh",
-    "interval": 1,
-    "return-type": "plain",
-    "tooltip": false
-  },
-
-  "custom/cava": {
-    "format": "{}",
-    "exec": "~/.config/waybar/scripts/cava.sh",
-    "tooltip": false
-  },
-"pulseaudio": {
-    "format": " {volume}%",
-    "format-muted": " Muted",
-    "scroll-step": 5,
-    "on-click": "pavucontrol"
-},
-  "custom/net": {
-    "exec": "/home/Gnana/.config/waybar/scripts/net_graph.sh",
-    "return-type": "json",
-    "interval": 1
-  },
-"custom/public_ip": {
-    "exec": "~/.config/waybar/scripts/pub_ip.sh",
-    "interval": 300,
-    "tooltip": false,
-    "format": " {}"
-},
-"custom/sep": {
-	"format": "/",  // Powerline style arrow (or │, ❯, •, etc.)
+#custom-sep{
 	
-},
-"custom/rss": {
-    "exec": "/home/Gnana/.config/waybar/scripts/rss-notify.sh",
-    "interval": 300,   // check every 5 minutes
-    "format": "📰"
-},
-"custom/pacman": {
-    "exec": "~/.config/waybar/scripts/pacman_updates.sh",
-    "interval": 300,
-    "tooltip": true,
-    "return-type": "text",
-    "format": "{}"
-},
-"custom/arch": {
-    "format": ".."
- },
+	color: #0ff000;
+}
+#idle_inhibitor.activated{
+	color: #fff;
+       /* animation: idle-blink 0.6s infinite alternate;*/
+	
+}
+#idle_inhibitor.deactivated{
+	color: #fff;
+}
 
- "temperature": {
-     "thermal-zone": 2,
-     "hwmon-path": "/sys/class/hwmon/hwmon2/temp1_input",
-     "critical-threshold": 80,
-     "format-critical": "{temperatureC}°C ",
-    "format": "{temperatureC}°C "
+@keyframes idle-blink {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0.2;
+    }
 }
+
+#custom-cava
+{
+	font-size: 23px;
+        color: rgba(181, 7, 7,0.7);   /* transparent red */
 }
+
+#network.wifi {
+    color: #2fff00;
+   animation: net-blink 0.2s infinite alternate;
+}
+
+#network.disconnected {
+    color: #ff0000;
+    animation: net-blink-fast 0.2s infinite alternate;
+}
+
+
+@keyframes net-blink {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0.4;
+    }
+}
+
+@keyframes net-blink-fast {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0.4;
+    }
+}
+
+
+#battery,
+#battery.charging,
+#battery.plugged
+{
+	color: #ff8400;
+       /*animation: bat-blink 0.1s infinite alternate;*/
+	
+}
+#battery.discharging,
+#battery.warning,
+#battery.critical{
+	color: #c4004b;
+        animation: bat-blink-fast 0.2s infinite alternate;
+	
+}
+
+@keyframes bat-blink {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0.5;
+    }
+}
+
+@keyframes bat-blink-fast {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0.1;
+    }
+}
+#bluetooth.off
+{
+	color: #d4d4d4;
+}
+#bluetooth.on
+{
+	color: #9c0c02;
+}
+
+#bluetooth.connected
+{
+	color: #9c0c02;
+     animation: bat-blink-fast 0.2s infinite alternate;
+
+}
+
+#custom-arch
+{
+	font-size: 21px;
+	color: #ff0000;
+}
+
+
