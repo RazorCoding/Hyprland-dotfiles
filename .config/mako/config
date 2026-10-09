@@ -1,10 +1,10 @@
 # Global Options
-font=IosevkaSS17 18
-background-color=#1e1e1e
+font=Iosevka SS18 18
+background-color=#1e1e1eE7
 text-color=#d4d4d4
-border-color=#9c9a9a
-border-size=0
-border-radius=3
+border-color=#0ff000
+border-size=1
+border-radius=7
 width=500
 height=200
 margin=7
@@ -21,4 +21,10 @@ default-timeout=10000
 # High urgency/critical alerts stay forever until clicked (0 disables the timeout)
 [urgency=high]
 default-timeout=0
+
+# Media-title notifications from youtube-media-notify.sh send no icon of their
+# own, so mako would fall back to the sending app's icon. Suppress it here
+# rather than globally, so other notifications keep their icons.
+[app-name=YouTube]
+icons=0
 
