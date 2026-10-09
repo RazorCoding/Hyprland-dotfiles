@@ -30,7 +30,7 @@
 
 #workspaces button.active {
     color: #fff;
-    border-bottom: 0px solid #ff2b44;
+    border-bottom: 1px solid #ff0000;
 
 }
 
@@ -190,7 +190,7 @@
 #custom-arch
 {
 	font-size: 21px;
-	color: #626ffc;
+	color: #ff0000;
 }
 
 
