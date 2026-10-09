@@ -1,10 +1,11 @@
 # Global Options
 font=Iosevka SS18 18
-background-color=#1e1e1eE7
+background-color=#1e1e1e
 text-color=#d4d4d4
-border-color=#0ff000
+border-color=#5e5e5e
 border-size=1
-border-radius=7
+border-radius=3
+anchor=top-right
 width=500
 height=200
 margin=7
@@ -17,6 +18,9 @@ history=1
 max-history=10
 sort=-time
 default-timeout=10000
+
+
+
 
 # High urgency/critical alerts stay forever until clicked (0 disables the timeout)
 [urgency=high]

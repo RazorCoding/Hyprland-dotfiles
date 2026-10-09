@@ -105,7 +105,7 @@
 #custom-cava
 {
 	font-size: 23px;
-        color: rgba(181, 7, 7,0.7);   /* transparent red */
+        color: rgba(181, 7, 7,0.4);   /* transparent red */
 }
 
 #network.wifi {
@@ -190,7 +190,7 @@
 #custom-arch
 {
 	font-size: 21px;
-	color: #0cc000;
+	color: #626ffc;
 }
 
 
