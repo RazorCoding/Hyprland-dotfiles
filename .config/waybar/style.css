@@ -11,7 +11,7 @@
 
 #waybar {
 	  font-size: 22px;
-    background: rgba(30, 30, 30, 0.95);    
+    background: rgba(30, 30, 30, 0.8);    
     color: #d4d4d4;
 }
 
@@ -30,23 +30,16 @@
 
 #workspaces button.active {
     color: #fff;
-    border-bottom: 1px solid #ff0000;
+    border-top: 0px solid #4fe00b;
 
 }
 
 #workspaces button:hover {
-    background: none;
-    color: #e0e0e0;
-    border: none;
-    border-radius: inherit;
-    box-shadow: none;
-    outline: none;
+    color: #fff;
+    border-bottom: #0ff000;
+
 }
 
-/* Focused workspace: underline */
-#workspaces button.focused {
-  border-bottom: 2px solid #ed0e0e;
-}
 
 #workspaces button.urgent {
    background-color: #ba261c;
@@ -190,7 +183,7 @@
 #custom-arch
 {
 	font-size: 21px;
-	color: #ff0000;
+	color: #00b7ba;
 }
 
 
