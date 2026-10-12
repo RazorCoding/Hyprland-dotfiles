@@ -164,7 +164,8 @@
   "interface": "wlo1",
   "format-wifi": "",
   "format-disconnected": "",
-  "tooltip-format": "SSID: {essid}\nSignal: {signalStrength}%\nIP: {ipaddr}\n↓ {bandwidthDownBits} ↑ {bandwidthUpBits}"
+  "tooltip-format": "SSID: {essid}\nSignal: {signalStrength}%\nIP: {ipaddr}\n↓ {bandwidthDownBits} ↑ {bandwidthUpBits}",
+  "interval": 0	
 },
 
   "custom/cpu": {
