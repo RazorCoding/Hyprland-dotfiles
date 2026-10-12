@@ -199,7 +199,8 @@
 "pulseaudio": {
     "format": " {volume}%",
     "format-muted": " Muted",
-    "scroll-step": 5,
+    "disable-scroll": false,
+    "scroll-step": 3,
     "on-click": "pavucontrol"
 },
   "custom/net": {
