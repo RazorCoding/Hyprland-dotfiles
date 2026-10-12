@@ -1,4 +1,3 @@
-
 autoload -Uz compinit
 compinit
 # If not running interactively, don't do anything
