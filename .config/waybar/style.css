@@ -36,7 +36,9 @@
 
 #workspaces button:hover {
     color: #fff;
-    border-bottom: #0ff000;
+    border: 0;
+    box-shadow: none;
+    border-bottom: 1px solid #00ffff;
 
 }
 

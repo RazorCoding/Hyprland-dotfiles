@@ -1,0 +1,10 @@
+## Recap: the Steam-on-iGPU fix (done)
+In `~/.config/hypr/hyprland.lua`:
+hl.env("__GLX_VENDOR_LIBRARY_NAME", "mesa")
+hl.env("__EGL_VENDOR_LIBRARY_FILENAMES", "/usr/share/glvnd/egl_vendor.d/50_mesa.json")
+hl.env("VK_LOADER_DRIVERS_DISABLE", "nvidia_icd.json")   -- the key one; survives Steam Runtime
+hl.env("LIBVA_DRIVER_NAME", "radeonsi")
+Result: `nvidia-smi` → **"No running processes found"**, all Steam processes on `radeonsi`/`mesa`.
+Two caveats worth remembering:
+- **Open terminals started before the reload still carry old env** — open a new one, or log out/in, before judging.
+- `VK_LOADER_DRIVERS_DISABLE` also disables Nvidia **Vulkan**, so `prime-run` for Vulkan games won't work while it's set. To offload to the dGPU for a specific title, use Steam launch options: `env -u VK_LOADER_DRIVERS_DISABLE prime-run %command%`.
