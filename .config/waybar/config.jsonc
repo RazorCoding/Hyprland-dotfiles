@@ -157,7 +157,8 @@
 "backlight": {
     "device": "amdgpu_bl2",
     "format": " {percent}%",
-
+    "disable-scroll": true,
+    "scroll-step": 3
 },
 "network": {
   "interface": "wlo1",
