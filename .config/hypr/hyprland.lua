@@ -148,7 +148,7 @@ hl.window_rule({
 
 
 local mainMod = "SUPER"
-
+hl.bind(mainMod .. " + T", hl.dsp.exec_cmd("./.config/hypr/scripts/toggle-touchpad.sh"))
 hl.bind(mainMod .. " + U", hl.dsp.exec_cmd("wofi-emoji"))
 hl.bind(mainMod .. " + B", hl.dsp.exec_cmd("killall -9 waybar 2>/dev/null; waybar &"))
 hl.bind(mainMod .. " + F", hl.dsp.window.fullscreen({ mode = "maximized", action = "toggle" }))
@@ -200,10 +200,9 @@ hl.bind(mainMod .. " + mouse_up", hl.dsp.focus({ workspace = "e-1" }))
 hl.bind(mainMod .. " + mouse:272", hl.dsp.window.drag())
 hl.bind(mainMod .. " + mouse:273", hl.dsp.window.resize())
 
+
 hl.bind("XF86MonBrightnessUp", hl.dsp.exec_cmd("brightnessctl set +5%"))
 hl.bind("XF86MonBrightnessDown", hl.dsp.exec_cmd("brightnessctl set 5%-"))
-
-
 
 hl.bind("XF86AudioPlay", hl.dsp.exec_cmd("playerctl play-pause; notify-send -u low ' YouTube' \"$(playerctl metadata --format '{{title}}' 2>/dev/null)\""))
 
@@ -301,6 +300,11 @@ hl.config({
         key_press_enables_dpms = true,
 	 vrr = 0
     },
+    hl.device({
+    name = "elan2841:00-04f3:31ad-touchpad",
+    sensitivity = 0
+
+}),
     -- Example per-device config
     -- See https://wiki.hyprland.org/Configuring/Keywords/#per-device-input-configs for more
     -- Example windowrule v1
