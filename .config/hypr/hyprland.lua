@@ -48,7 +48,7 @@ hl.curve("liner", { type = "bezier", points = { { 1, 1 }, { 1, 1 } } })
 hl.animation({
     leaf = "windows",
     enabled = true,
-    speed = 2,
+    speed = 1,
     bezier = "wind",
     style = "slidevert",
 })
@@ -69,20 +69,20 @@ hl.animation({
 hl.animation({
     leaf = "windowsMove",
     enabled = true,
-    speed = 2,
+    speed = 1,
     bezier = "wind",
     style = "slide",
 })
 hl.animation({
     leaf = "border",
     enabled = true,
-    speed = 1,
+    speed = 4,
     bezier = "liner",
 })
 hl.animation({
     leaf = "borderangle",
     enabled = true,
-    speed = 20,
+    speed = 10,
     bezier = "liner",
     style = "loop",
 })
