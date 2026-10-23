@@ -152,7 +152,7 @@ hl.bind(mainMod .. " + T", hl.dsp.exec_cmd("./.config/hypr/scripts/toggle-touchp
 hl.bind(mainMod .. " + U", hl.dsp.exec_cmd("wofi-emoji"))
 hl.bind(mainMod .. " + B", hl.dsp.exec_cmd("killall -9 waybar 2>/dev/null; waybar &"))
 hl.bind(mainMod .. " + F", hl.dsp.window.fullscreen({ mode = "maximized", action = "toggle" }))
-hl.bind(mainMod .. " + L", hl.dsp.exec_cmd("hyprlock"))
+hl.bind(mainMod .. " + L", hl.dsp.exec_cmd("playerctl pause; hyprlock; "))
 hl.bind(mainMod .. " + Return", hl.dsp.exec_cmd(terminal))
 hl.bind(mainMod .. " + C", hl.dsp.window.close())
 hl.bind(mainMod .. " + M", hl.dsp.exec_cmd("hyprshutdown ; hyprctl dispatch exit"))
