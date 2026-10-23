@@ -3,7 +3,7 @@ add_newline = false
 format = """$directory
 $character"""
 right_format = """
-"""
+$cmd_duration"""
 [custom.cpu]
 command = "top -bn1 | grep 'Cpu(s)' | awk '{print int(100 - $8)\"%\"}'"
 when = "true"
@@ -30,10 +30,8 @@ style = "#bold white"
 [cmd_duration]
 min_time = 0
 disabled = false
-format = "took [$duration](#ff8800)"
-show_milliseconds = true
-show_notifications = true
-min_time_to_notify = 45000
+format = "[$duration](#ff8800)"
+
 
 [localip]
 ssh_only = false
@@ -55,8 +53,8 @@ truncation_length = 0
 truncate_to_repo = false
 style = "#0ff000"
 [character]
-success_symbol = "[#](#88ff00)"
-error_symbol = "[#](#ff0000)"
-vicmd_symbol = "[#](bold purple)"
+success_symbol = "[❯](#88ff00)"
+error_symbol = "[❯](#ff0000)"
+vicmd_symbol = "[❯](bold purple)"
 
 
