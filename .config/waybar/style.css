@@ -11,7 +11,7 @@
 
 #waybar {
 	  font-size: 22px;
-    background: rgba(30, 30, 30, 0.8);    
+    background: rgba(30, 30, 30, 0.98);    
     color: #d4d4d4;
 }
 
@@ -30,7 +30,7 @@
 
 #workspaces button.active {
     color: #fff;
-    border-bottom: 1px solid #0ff000;
+    border-bottom: 0px solid #ff0000;
 
 }
 
@@ -38,7 +38,7 @@
     color: #fff;
     border: 0;
     box-shadow: none;
-    border-bottom: 1px solid #00ffff;
+    border-bottom: 0px solid #00ffff;
 
 }
 
@@ -100,17 +100,17 @@
 #custom-cava
 {
 	font-size: 23px;
-        color: rgba(181, 7, 7,0.4);   /* transparent red */
+        color: rgba(255, 25, 0,0.4);   /* transparent red */
 }
 
 #network.wifi {
     color: #2fff00;
-   animation: net-blink 0.2s infinite alternate;
+   animation: net-blink 0.3s infinite alternate;
 }
 
 #network.disconnected {
     color: #ff0000;
-    animation: net-blink-fast 0.2s infinite alternate;
+    animation: net-blink-fast 0.3s infinite alternate;
 }
 
 
@@ -178,14 +178,14 @@
 #bluetooth.connected
 {
 	color: #51ff00;
-     animation: bat-blink-fast 0.5s infinite alternate;
+     animation: bat-blink-fast 0.4s infinite alternate;
 
 }
 
 #custom-arch
 {
 	font-size: 21px;
-	color: #0ff000;
+	color: #ff0000;
 }
 
 

@@ -13,7 +13,7 @@
   ],
 
   "modules-center": [
-	  "hyprland/window"
+
   ],
 
   "modules-right":[	  
@@ -55,7 +55,7 @@
   "9": "Work3",
   "10": "Work4",
   "focused": "●",
-  "urgent": "!ALERT!",
+  "urgent": "Ugent!",
   
 }
   },
@@ -232,9 +232,6 @@
     "return-type": "text",
     "format": "{}"
 },
-"custom/arch": {
-    "format": ".."
- },
 
  "temperature": {
      "thermal-zone": 2,
