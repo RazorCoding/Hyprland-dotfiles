@@ -44,7 +44,7 @@
 
 
 #workspaces button.urgent {
-   background-color: #ba261c;
+   background-color: #ff0000;
    color: #fff;
    border-radius: 5px;
    margin: 4px;
@@ -99,7 +99,7 @@
 
 #custom-cava
 {
-	font-size: 23px;
+	font-size: 21px;
         color: rgba(255, 25, 0,0.4);   /* transparent red */
 }
 

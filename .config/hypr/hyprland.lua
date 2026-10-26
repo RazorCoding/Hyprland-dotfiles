@@ -23,7 +23,7 @@
 
 hl.env("__GLX_VENDOR_LIBRARY_NAME", "mesa")
 hl.env("__EGL_VENDOR_LIBRARY_FILENAMES", "/usr/share/glvnd/egl_vendor.d/50_mesa.json")
-hl.env("VK_LOADER_DRIVERS_DISABLE", "nvidia_icd.json")
+-- hl.env("VK_LOADER_DRIVERS_DISABLE", "nvidia_icd.json")  -- disabled: this made CS2 fall back to the AMD iGPU
 hl.env("LIBVA_DRIVER_NAME", "radeonsi")
 hl.env("QT_QPA_PLATFORMTHEME", "qt6ct")
 --monitor=,2400x1080@60,auto,1
@@ -118,7 +118,7 @@ hl.window_rule({
     match = {
         initial_class = "^steam$",
     },
-    workspace = "3",
+    workspace = "3 silent",
 })
 
 hl.window_rule({
@@ -134,7 +134,7 @@ hl.window_rule({
     match = {
         class = "^chromium$",
     },
-    workspace = "2",
+    workspace = "2 silent",
 })
 
 
@@ -339,6 +339,8 @@ hl.config({
 
 hl.on("hyprland.start", function()
     hl.exec_cmd("hypridle")
+      hl.exec_cmd ("chromium")  
+      hl.exec_cmd ("env -u VK_LOADER_DRIVERS_DISABLE prime-run steam")
     hl.exec_cmd("waybar")
     hl.exec_cmd("hyprpaper")
     hl.exec_cmd("/usr/lib/polkit-kde-authentication-agent-1 &")
