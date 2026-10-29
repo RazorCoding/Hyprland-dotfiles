@@ -3,14 +3,14 @@
 theme = "Monokai Soda"
 #theme = "Abernathy"
 #theme = "Catppuccin Macchiato"
-background-opacity = 0.95
+background-opacity = 0.98
 window-decoration = false
 window-padding-x = 10
 window-padding-y = 10
 
 #font-feature = -liga, -dlig, -calt
 # -------- COLORS --------
-background = #1c1c1c
+background = #1e1e1e
 foreground = #d4d4d4
 
 
@@ -19,14 +19,14 @@ selection-background = #49483e
 selection-foreground = #f8f8f2
 
 # -------- FONT --------
-font-family = "Iosevka SS17"
+font-family = "Iosevka SS18"
 font-size = 19.5
 adjust-cell-width = 0
 font-style = regular
 font-style-bold = regular
 font-style-italic = italic
 font-style-bold-italic = bold italic
-font-feature = +feat, +liga, +calt 
+font-feature = -feat, -liga, -calt 
 
 cursor-color = #ffffff
 cursor-style = block

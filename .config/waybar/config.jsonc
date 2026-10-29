@@ -208,6 +208,7 @@
 "custom/arch": {
     "format": "..",
     "tooltip": false,
+    "on-click": "imv ~/.config/hypr/scripts/meditation.png"
 
 },
   "custom/net": {
