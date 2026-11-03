@@ -1,3 +1,4 @@
+
 autoload -Uz compinit
 compinit
 # If not running interactively, don't do anything
@@ -7,7 +8,7 @@ compinit
 if [[ -z "$DISPLAY" && "$(tty)" == "/dev/tty1" ]]; then
   exec start-hyprland
 fi
-
+# Aliases
 alias hx='helix'
 alias ls='ls --color=auto'
 
@@ -23,6 +24,3 @@ SAVEHIST=1000000
 setopt APPEND_HISTORY        # append instead of overwrite
 setopt INC_APPEND_HISTORY    # write to file instantly
 
-
-# opencode
-export PATH=/home/USER/.opencode/bin:$PATH
