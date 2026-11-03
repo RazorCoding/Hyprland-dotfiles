@@ -1,7 +1,9 @@
 add_newline = false
 
-format = """$directory
-$character"""
+format = """
+$directory
+$character
+"""
 right_format = """
 $cmd_duration"""
 [custom.cpu]
@@ -30,7 +32,7 @@ style = "#bold white"
 [cmd_duration]
 min_time = 0
 disabled = false
-format = "[$duration](#aeeb34)"
+format = "[took $duration](#34eb9b)"
 
 
 [localip]
@@ -53,7 +55,7 @@ truncation_length = 0
 truncate_to_repo = false
 style = "#0ff000"
 [character]
-success_symbol = "[❯](#88ff00)"
+success_symbol = "[❯](#0ff000)"
 error_symbol = "[❯](#ff0000)"
 vicmd_symbol = "[❯](bold purple)"
 
