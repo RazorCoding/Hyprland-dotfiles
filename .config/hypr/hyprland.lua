@@ -55,21 +55,21 @@ hl.animation({
 hl.animation({
     leaf = "windowsIn",
     enabled = true,
-    speed = 3,
+    speed = 2.5,
     bezier = "winIn",
     style = "slidevert",
 })
 hl.animation({
     leaf = "windowsOut",
     enabled = true,
-    speed = 3,
+    speed = 2.5,
     bezier = "winOut",
     style = "slidevert",
 })
 hl.animation({
     leaf = "windowsMove",
     enabled = true,
-    speed = 2,
+    speed = 2.5,
     bezier = "wind",
     style = "slide",
 })
@@ -95,7 +95,7 @@ hl.animation({
 hl.animation({
     leaf = "workspaces",
     enabled = true,
-    speed = 3,
+    speed = 2.5,
     bezier = "wind",
 })
 
