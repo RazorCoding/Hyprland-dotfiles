@@ -99,12 +99,12 @@
 
 #custom-cava
 {
-	font-size: 21px;
-        color: rgba(255, 25, 0,0.4);   /* transparent red */
+	font-size: 24px;
+        color: rgba(52, 235, 155,0.8);   /* transparent red */
 }
 
 #network.wifi {
-    color: #2fff00;
+    color: #34eb9b;
    animation: net-blink 0.3s infinite alternate;
 }
 
@@ -185,7 +185,7 @@
 #custom-arch
 {
 	font-size: 21px;
-	color: #ff0000;
+	color: #34eb9b;
 }
 
 
