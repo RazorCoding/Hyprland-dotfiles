@@ -9,11 +9,17 @@
 "on-sigusr2": "show",
   "modules-left": [
 "custom/arch",
-"hyprland/workspaces"
+"hyprland/workspaces",
+"custom/sep",
+"custom/cava",
+"custom/sep"
+
   ],
 
   "modules-center": [
-
+	"custom/sep",
+	"hyprland/window",
+	"custom/sep"
   ],
 
   "modules-right":[	  
@@ -23,8 +29,7 @@
   "backlight",
  "custom/sep",
 "pulseaudio",
-"custom/sep",
-"custom/cava",
+
 "custom/sep",
   "network",
   "custom/sep",
@@ -162,8 +167,8 @@
 },
 "network": {
   "interface": "wlo1",
-  "format-wifi": "",
-  "format-disconnected": "",
+  "format-wifi": "",
+  "format-disconnected": "",
   "tooltip-format": "SSID: {essid}\nSignal: {signalStrength}%\nIP: {ipaddr}\n↓ {bandwidthDownBits} ↑ {bandwidthUpBits}",
   "interval": 0	
 },
@@ -223,7 +228,7 @@
     "format": " {}"
 },
 "custom/sep": {
-	"format": "/",  // Powerline style arrow (or │, ❯, •, etc.)
+	"format": ".",  // Powerline style arrow (or │, ❯, •, etc.)
 	
 },
 "custom/rss": {
