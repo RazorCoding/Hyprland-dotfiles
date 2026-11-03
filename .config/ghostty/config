@@ -1,8 +1,8 @@
 # -------- GENERAL --------
 #theme = "Banana Blueberry"
-#theme = "Monokai Soda"
+theme = "Monokai Soda"
 #theme = "Abernathy"
-theme = "Clu"
+#theme = "Clu"
 background-opacity = 0.98
 window-decoration = false
 window-padding-x = 10
