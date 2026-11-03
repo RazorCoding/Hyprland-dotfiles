@@ -9,9 +9,10 @@
 "on-sigusr2": "show",
   "modules-left": [
 "custom/arch",
-"hyprland/workspaces",
 "custom/sep",
 "custom/cava",
+"custom/sep",
+"hyprland/workspaces",
 "custom/sep"
 
   ],
@@ -211,7 +212,7 @@
     "on-click": "pavucontrol"
 },
 "custom/arch": {
-    "format": "..",
+    "format": "",
     "tooltip": false,
     "on-click": "imv ~/.config/hypr/scripts/meditation.png"
 
