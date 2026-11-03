@@ -69,14 +69,14 @@ hl.animation({
 hl.animation({
     leaf = "windowsMove",
     enabled = true,
-    speed = 3,
+    speed = 2,
     bezier = "wind",
     style = "slide",
 })
 hl.animation({
     leaf = "border",
     enabled = true,
-    speed = 4,
+    speed = 2,
     bezier = "liner",
 })
 hl.animation({
