@@ -10,11 +10,8 @@
   "modules-left": [
 "custom/arch",
 "custom/sep",
-"custom/cava",
-"custom/sep",
 "hyprland/workspaces",
 "custom/sep"
-
   ],
 
   "modules-center": [
@@ -30,7 +27,8 @@
   "backlight",
  "custom/sep",
 "pulseaudio",
-
+"custom/sep",
+"custom/cava",
 "custom/sep",
   "network",
   "custom/sep",
