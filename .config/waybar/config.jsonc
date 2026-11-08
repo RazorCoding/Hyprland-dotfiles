@@ -8,6 +8,7 @@
 "on-sigusr1": "hide",
 "on-sigusr2": "show",
   "modules-left": [
+"custom/sep",
 "custom/arch",
 "custom/sep",
 "hyprland/workspaces",
@@ -59,7 +60,7 @@
   "9": "Work3",
   "10": "Work4",
   "focused": "●",
-  "urgent": "!ALERT!",
+  "urgent": "!SOMTNSN!",
   
 }
   },
@@ -140,7 +141,7 @@
   "format-icons": ["","","","",""],
   "interval": 1,
   "states": {
-    "warning": 20,
+    "warning": 15,
     "critical": 5
   }
 },
