@@ -48,28 +48,28 @@ hl.curve("liner", { type = "bezier", points = { { 1, 1 }, { 1, 1 } } })
 hl.animation({
     leaf = "windows",
     enabled = true,
-    speed = 2,
+    speed = 1,
     bezier = "wind",
     style = "slidevert",
 })
 hl.animation({
     leaf = "windowsIn",
     enabled = true,
-    speed = 2,
+    speed = 1,
     bezier = "winIn",
     style = "slidevert",
 })
 hl.animation({
     leaf = "windowsOut",
     enabled = true,
-    speed = 2,
+    speed = 1,
     bezier = "winOut",
     style = "slidevert",
 })
 hl.animation({
     leaf = "windowsMove",
     enabled = true,
-    speed = 2.5,
+    speed = 1,
     bezier = "wind",
     style = "slide",
 })
@@ -95,7 +95,7 @@ hl.animation({
 hl.animation({
     leaf = "workspaces",
     enabled = true,
-    speed = 2,
+    speed = 1,
     bezier = "wind",
 })
 
@@ -152,7 +152,7 @@ hl.bind(mainMod .. " + T", hl.dsp.exec_cmd("./.config/hypr/scripts/toggle-touchp
 hl.bind(mainMod .. " + U", hl.dsp.exec_cmd("wofi-emoji"))
 hl.bind(mainMod .. " + B", hl.dsp.exec_cmd("killall -9 waybar 2>/dev/null; waybar &"))
 hl.bind(mainMod .. " + F", hl.dsp.window.fullscreen({ mode = "maximized", action = "toggle" }))
-hl.bind(mainMod .. " + L", hl.dsp.exec_cmd("playerctl pause; hyprlock; "))
+hl.bind(mainMod .. " + L", hl.dsp.exec_cmd("playerctl pause; hyprlock;"))
 hl.bind(mainMod .. " + Return", hl.dsp.exec_cmd(terminal))
 hl.bind(mainMod .. " + C", hl.dsp.window.close())
 hl.bind(mainMod .. " + M", hl.dsp.exec_cmd("hyprshutdown ; hyprctl dispatch exit"))
@@ -338,11 +338,12 @@ hl.config({
 })
 
 hl.on("hyprland.start", function()
-    hl.exec_cmd("hypridle")
+   --- hl.exec_cmd("hypridle")
       hl.exec_cmd ("chromium")  
       hl.exec_cmd ("env -u VK_LOADER_DRIVERS_DISABLE prime-run steam")
     hl.exec_cmd("waybar")
     hl.exec_cmd("hyprpaper")
+    h.exec_cmd("hypridle")
     hl.exec_cmd("/usr/lib/polkit-kde-authentication-agent-1 &")
     hl.exec_cmd("sunsetr")
     hl.exec_cmd("wl-paste --type text --watch cliphist store")
