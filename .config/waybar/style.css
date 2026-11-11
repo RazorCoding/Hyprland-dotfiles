@@ -182,6 +182,23 @@
 
 }
 
+#custom-bluetooth.off {
+	color: #d4d4d4;
+}
+#custom-bluetooth.on {
+	color: #51ff00;
+}
+#custom-bluetooth.connected {
+	color: #51ff00;
+	animation: bat-blink-fast 0.4s infinite alternate;
+}
+#custom-bluetooth.warning {
+	color: #ff8400;
+}
+#custom-bluetooth.critical {
+	color: #ff0000;
+}
+
 #custom-arch
 {
 	font-size: 21px;
