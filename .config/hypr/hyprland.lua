@@ -254,8 +254,8 @@ hl.config({
     },
     general = {
         -- See https://wiki.hyprland.org/Configuring/Variables/ for more
-        gaps_in = 3,
-        gaps_out = 3,
+        gaps_in = 4,
+        gaps_out =4,
         border_size = 0,
         col = {
             active_border = { colors = { "rgb(ff0048)", "rgb(ff0048)" }, angle = 45 },
@@ -267,7 +267,7 @@ hl.config({
     },
     decoration = {
         -- See https://wiki.hyprland.org/Configuring/Variables/ for more
-        rounding = 7,
+        rounding = 4,
         blur = {
             enabled = false,
             size = 8,
