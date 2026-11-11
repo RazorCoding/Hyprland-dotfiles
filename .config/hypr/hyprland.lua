@@ -48,28 +48,28 @@ hl.curve("liner", { type = "bezier", points = { { 1, 1 }, { 1, 1 } } })
 hl.animation({
     leaf = "windows",
     enabled = true,
-    speed = 1,
+    speed = 2,
     bezier = "wind",
     style = "slidevert",
 })
 hl.animation({
     leaf = "windowsIn",
     enabled = true,
-    speed = 1,
+    speed = 2,
     bezier = "winIn",
     style = "slidevert",
 })
 hl.animation({
     leaf = "windowsOut",
     enabled = true,
-    speed = 1,
+    speed = 2,
     bezier = "winOut",
     style = "slidevert",
 })
 hl.animation({
     leaf = "windowsMove",
     enabled = true,
-    speed = 1,
+    speed = 3,
     bezier = "wind",
     style = "slide",
 })
@@ -95,7 +95,7 @@ hl.animation({
 hl.animation({
     leaf = "workspaces",
     enabled = true,
-    speed = 1,
+    speed = 3,
     bezier = "wind",
 })
 
@@ -267,7 +267,7 @@ hl.config({
     },
     decoration = {
         -- See https://wiki.hyprland.org/Configuring/Variables/ for more
-        rounding = 5,
+        rounding = 7,
         blur = {
             enabled = false,
             size = 8,
