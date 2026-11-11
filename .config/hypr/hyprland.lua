@@ -48,21 +48,21 @@ hl.curve("liner", { type = "bezier", points = { { 1, 1 }, { 1, 1 } } })
 hl.animation({
     leaf = "windows",
     enabled = true,
-    speed = 2,
+    speed = 1,
     bezier = "wind",
     style = "slidevert",
 })
 hl.animation({
     leaf = "windowsIn",
     enabled = true,
-    speed = 2,
+    speed = 1,
     bezier = "winIn",
     style = "slidevert",
 })
 hl.animation({
     leaf = "windowsOut",
     enabled = true,
-    speed = 2,
+    speed = 1,
     bezier = "winOut",
     style = "slidevert",
 })
@@ -95,7 +95,7 @@ hl.animation({
 hl.animation({
     leaf = "workspaces",
     enabled = true,
-    speed = 3,
+    speed = 1.7,
     bezier = "wind",
 })
 
