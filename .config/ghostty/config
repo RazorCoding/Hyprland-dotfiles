@@ -3,12 +3,12 @@
 theme = "Monokai Soda"
 #theme = "Abernathy"
 #theme = "Clu"
-background-opacity = 0.96
+background-opacity = 0.60
 window-decoration = false
 window-padding-x = 10
 window-padding-y = 10
 background-blur = true
-background-image = /home/Gnana/.config/waybar/scripts/747613054_18416982115196058_5845340769939843698_n.webp
+background-image = /home/Gnana/.config/waybar/scripts/ghostty-bg.png
 background-image-fit = cover
 background-image-opacity = 0.25
 background-image-position = center
