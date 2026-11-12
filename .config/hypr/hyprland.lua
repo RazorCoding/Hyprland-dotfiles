@@ -269,7 +269,7 @@ hl.config({
         -- See https://wiki.hyprland.org/Configuring/Variables/ for more
         rounding = 6,
         blur = {
-            enabled = false,
+            enabled = true,
             size = 8,
             passes = 4,
             new_optimizations = true,

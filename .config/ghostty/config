@@ -3,10 +3,11 @@
 theme = "Monokai Soda"
 #theme = "Abernathy"
 #theme = "Clu"
-background-opacity = 0.93
+background-opacity = 0.85
 window-decoration = false
 window-padding-x = 10
 window-padding-y = 10
+background-blur = true
 
 #font-feature = -liga, -dlig, -calt
 # -------- COLORS --------
