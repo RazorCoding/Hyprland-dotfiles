@@ -31,9 +31,9 @@
 "custom/sep",
 "custom/cava",
 "custom/sep",
+"bluetooth",
+"custom/sep",
   "network",
-  "custom/sep",
-  "custom/bluetooth",
   "custom/sep",
     "battery",
   "custom/sep",
@@ -75,9 +75,6 @@
     }
   },
 
-  "sway/mode": {
-    "format": "<span style=\"italic\">{}</span>"
-  },
 
   "bluetooth": {
 	// "controller": "controller1", // specify the alias of the controller if there are more than 1 on the system
@@ -87,14 +84,7 @@
 	"tooltip-format": "{controller_alias}\t{controller_address}",
 	"tooltip-format-connected": "{controller_alias}\t{controller_address}\n\n{device_enumerate}",
 	"tooltip-format-enumerate-connected": "{device_alias}\t{device_address}",
-        "on-click": "rfkill unblock bluetooth; if bluetoothctl show | grep -q 'Powered: yes'; then bluetoothctl power off && notify-send 'Bluetooth' 'Bluetooth disabled'; else bluetoothctl power on && sleep 2 && bluetoothctl connect 22:99:35:E6:50:44 && notify-send 'Bluetooth' 'Hybrid 1 connected'; fi"
-},
-  "custom/bluetooth": {
-    "exec": "/home/Gnana/.config/waybar/scripts/bluetooth.sh",
-    "interval": 2,
-    "return-type": "json",
-    "tooltip": true,
-    "on-click": "rfkill unblock bluetooth; blueman-manager"
+        "on-click": "rfkill unblock bluetooth; if bluetoothctl show | grep -q \"Powered: yes\"; then bluetoothctl power off; else bluetoothctl power on && sleep 2 && bluetoothctl connect 22:99:35:E6:50:44; fi"
   },
   "sway/scratchpad": {
     "format": "{icon} {count}",
@@ -220,7 +210,7 @@
 "custom/arch": {
     "format": "",
     "tooltip": false,
-    "on-click": "imv ~/.config/hypr/scripts/meditation.png"
+    "on-click": "/home/Gnana/.local/bin/imv ~/.config/hypr/scripts/meditation.png"
 
 },
   "custom/net": {

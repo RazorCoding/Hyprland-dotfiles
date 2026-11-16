@@ -122,6 +122,13 @@ hl.window_rule({
 })
 
 hl.window_rule({
+    name = "gamesteamcs2",
+    match = {
+        initial_class = "cs2",
+    },
+    workspace = "5",
+})
+hl.window_rule({
     name = "gamesteam",
     match = {
         initial_class = "^steam_app_.*$",
@@ -159,6 +166,7 @@ hl.bind(mainMod .. " + M", hl.dsp.exec_cmd("hyprshutdown ; hyprctl dispatch exit
 hl.bind(mainMod .. " + V", hl.dsp.window.float({ action = "toggle" }))
 hl.bind(mainMod .. " + I", hl.dsp.exec_cmd("cliphist list | wofi --dmenu | cliphist decode | wl-copy"))
 hl.bind(mainMod .. " + R", hl.dsp.exec_cmd(menu))
+hl.bind(mainMod .. " + D", hl.dsp.exec_cmd("bluetoothctl connect 22:99:35:E6:50:44"))
 hl.bind(mainMod .. " + J", hl.dsp.layout("togglesplit"))
 hl.bind(mainMod .. " + X", hl.dsp.exec_cmd("env -u VK_LOADER_DRIVERS_DISABLE prime-run steam"))
 hl.bind(mainMod .. " + TAB", hl.dsp.focus({workspace = "e+1"}))
