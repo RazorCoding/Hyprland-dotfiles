@@ -49,10 +49,10 @@
     "warp-on-scroll": false,
 "format": "{name}:{icon}",
 "format-icons": {
-  "1": "Term",
+  "1": "Chat",
   "2": "Browser",
   "3": "Steam",
-  "4": "IRC",
+  "4": "Code",
   "5": "Game",
   "6": "Discord",
   "7": "Work7",
