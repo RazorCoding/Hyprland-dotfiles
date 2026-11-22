@@ -104,13 +104,13 @@
 }
 
 #network.wifi {
-    color: #fff;
+    color: #35db37;
    animation: net-blink 0.1s infinite alternate;
 }
 
 #network.disconnected {
-    color: #fff;
-    /*animation: net-blink-fast 0.3s infinite alternate;*/
+    color: #ff0000;
+    animation: net-blink-fast 0.3s infinite alternate;
 }
 
 
@@ -201,7 +201,7 @@
 
 #custom-arch
 {
-	font-size: 21px;
+	font-size: 20px;
 	color: #03c6fc;
 }
 
