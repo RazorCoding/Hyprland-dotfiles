@@ -80,8 +80,8 @@
 	color: #0ff000;
 }
 #idle_inhibitor.activated{
-	color: #fff;
-       /* animation: idle-blink 0.6s infinite alternate;*/
+	color: #ff2f00;
+       animation: idle-blink 0.6s infinite alternate;
 	
 }
 #idle_inhibitor.deactivated{
