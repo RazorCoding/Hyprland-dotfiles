@@ -77,7 +77,8 @@
 
 #custom-sep{
 	
-	color: #0ff000;
+	color: #ff2f00;
+	font-size: 23px;
 }
 #idle_inhibitor.activated{
 	color: #ff2f00;
