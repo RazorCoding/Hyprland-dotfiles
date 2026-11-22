@@ -60,7 +60,7 @@
   "9": "Work3",
   "10": "Work4",
   "focused": "●",
-  "urgent": "!SOMTNSN!",
+  "urgent": "!!TODO!!",
   
 }
   },
@@ -164,8 +164,8 @@
 },
 "network": {
   "interface": "wlo1",
-  "format-wifi": "",
-  "format-disconnected": "",
+  "format-wifi": "",
+  "format-disconnected": "",
   "tooltip-format": "SSID: {essid}\nSignal: {signalStrength}%\nIP: {ipaddr}\n↓ {bandwidthDownBits} ↑ {bandwidthUpBits}",
   "interval": 0	
 },
@@ -210,7 +210,7 @@
 "custom/arch": {
     "format": "",
     "tooltip": false,
-    "on-click": "/home/Gnana/.local/bin/imv ~/.config/hypr/scripts/meditation.png"
+    "on-click": "/usr/bin/swayimg ~/.config/hypr/scripts/meditation.png"
 
 },
   "custom/net": {
