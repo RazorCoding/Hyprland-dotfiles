@@ -114,6 +114,13 @@
     animation: net-blink-fast 0.3s infinite alternate;
 }
 
+#custom-nload {
+    color: #35db37;
+    padding: 0 3px;
+}
+#custom-nload .down { color: #35db37; }
+#custom-nload .up   { color: #ff9900; }
+
 
 @keyframes net-blink {
     from {

@@ -12,7 +12,8 @@
 "custom/arch",
 "custom/sep",
 "hyprland/workspaces",
-"custom/sep"
+"custom/sep",
+"custom/nload"
   ],
 
   "modules-center": [
@@ -167,7 +168,13 @@
   "format-wifi": "",
   "format-disconnected": "",
   "tooltip-format": "SSID: {essid}\nSignal: {signalStrength}%\nIP: {ipaddr}\n↓ {bandwidthDownBits} ↑ {bandwidthUpBits}",
-  "interval": 0	
+  "interval": 0
+},
+"custom/nload": {
+    "exec": "~/.config/waybar/scripts/nload.sh",
+    "interval": 1,
+    "return-type": "json",
+    "tooltip": true
 },
 
   "custom/cpu": {
