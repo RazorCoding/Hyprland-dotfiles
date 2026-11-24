@@ -42,7 +42,8 @@
   "custom/sep",
    "clock",
   "custom/sep",
-   "tray"
+   "tray",
+   "custom/sep"
 ],
 
   "hyprland/workspaces": {
