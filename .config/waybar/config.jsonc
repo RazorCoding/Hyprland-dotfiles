@@ -13,7 +13,8 @@
 "custom/sep",
 "hyprland/workspaces",
 "custom/sep",
-"custom/nload"
+"custom/nload",
+"custom/sep"
   ],
 
   "modules-center": [
@@ -35,6 +36,7 @@
 "bluetooth",
 "custom/sep",
   "network",
+
   "custom/sep",
     "battery",
   "custom/sep",
@@ -168,7 +170,7 @@
   "format-wifi": "",
   "format-disconnected": "",
   "tooltip-format": "SSID: {essid}\nSignal: {signalStrength}%\nIP: {ipaddr}\n↓ {bandwidthDownBits} ↑ {bandwidthUpBits}",
-  "interval": 0
+  "interval": 1
 },
 "custom/nload": {
     "exec": "~/.config/waybar/scripts/nload.sh",
