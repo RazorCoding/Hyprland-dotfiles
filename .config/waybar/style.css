@@ -121,6 +121,13 @@
 #custom-nload .down { color: #35db37; }
 #custom-nload .up   { color: #ff9900; }
 
+#custom-data_usage {
+    color: #89b4fa;
+    padding: 0 3px;
+}
+#custom-data_usage.warning { color: #f9e2af; }
+#custom-data_usage.critical { color: #f38ba8; }
+
 
 @keyframes net-blink {
     from {

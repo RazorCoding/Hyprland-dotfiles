@@ -38,6 +38,9 @@
   "network",
 
   "custom/sep",
+  "custom/data_usage",
+
+  "custom/sep",
     "battery",
   "custom/sep",
    "clock",
@@ -176,6 +179,13 @@
 "custom/nload": {
     "exec": "~/.config/waybar/scripts/nload.sh",
     "interval": 1,
+    "return-type": "json",
+    "tooltip": true
+},
+
+"custom/data_usage": {
+    "exec": "python3 ~/.config/waybar/scripts/data_usage.py",
+    "interval": 5,
     "return-type": "json",
     "tooltip": true
 },
