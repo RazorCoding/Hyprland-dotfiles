@@ -1,6 +1,6 @@
 // -*- mode: jsonc -*-
 {
-  "position": "bottom",
+  "position": "top",
   "mode": "dock",
  "layer": "overlay",
 "exclusive": false,
