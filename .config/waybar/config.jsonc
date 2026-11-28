@@ -1,6 +1,6 @@
 // -*- mode: jsonc -*-
 {
-  "position": "top",
+  "position": "bottom",
   "mode": "dock",
  "layer": "overlay",
 "exclusive": false,
@@ -125,7 +125,7 @@
 
   "clock": {
     "format":"{:%a, %d %b %Y %I:%M:%S %p}",
-    "interval": 0,
+    "interval": 1,
     "tooltip": false
   },
 
@@ -143,7 +143,7 @@
   "format-warning": " {capacity}%",
   "format-critical": " {capacity}%",
   "format-icons": ["","","","",""],
-  "interval": 1,
+  "interval": 5,
   "states": {
     "warning": 15,
     "critical": 5
@@ -174,11 +174,11 @@
   "format-wifi": "",
   "format-disconnected": "",
   "tooltip-format": "SSID: {essid}\nSignal: {signalStrength}%\nIP: {ipaddr}\n↓ {bandwidthDownBits} ↑ {bandwidthUpBits}",
-  "interval": 1
+  "interval": 3
 },
 "custom/nload": {
     "exec": "~/.config/waybar/scripts/nload.sh",
-    "interval": 1,
+    "interval": 3,
     "return-type": "json",
     "tooltip": true
 },
@@ -203,14 +203,14 @@
 
   "custom/airplane": {
     "exec": "~/.config/waybar/scripts/airplane_status.sh",
-    "interval": 1,
+    "interval": 5,
     "return-type": "json",
     "tooltip": true
 },
 
   "custom/battery_health": {
     "exec": "~/.config/waybar/scripts/battery_health.sh",
-    "interval": 1,
+    "interval": 5,
     "return-type": "plain",
     "tooltip": false
   },
@@ -230,7 +230,7 @@
 "custom/arch": {
     "format": "",
     "tooltip": false,
-    "on-click": "/usr/bin/swayimg ~/.config/hypr/scripts/meditation.png"
+    "on-click": "/usr/bin/swayimg ~/.config/hypr/scripts/920913024_18439703131196058_841004425472890908_n.webp"
 
 },
   "custom/net": {
